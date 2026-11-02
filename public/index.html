@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
+<title>pdf</title>
+<meta name="description" content="Merge, split, compress and convert PDFs in your browser. Nothing is uploaded.">
+<link rel="icon" href="/favicon.ico" sizes="16x16">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-icon.png">
+<link rel="preload" href="/vendor/vt323-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script type="module" src="/app.js"></script>
+</head>
+<body>
+<main class="screen">
+  <div class="topline">
+    <a href="/" class="home-link">pdf.davidxie.dev</a>
+    <button type="button" class="back" id="back" hidden><span class="keys">[Esc] </span><span class="touch">&lt; </span>Main menu</button>
+  </div>
+
+  <section id="home">
+    <p>Merge, split, compress and convert PDFs. Everything runs in your browser, so files never leave your device.</p>
+    <div class="menu" id="home-menu"></div>
+  </section>
+
+  <section id="tool" hidden>
+    <h1 id="tool-title"></h1>
+    <p id="tool-blurb"></p>
+    <ul id="files"></ul>
+    <div class="pages" id="pages"></div>
+    <button type="button" class="dropzone" id="dropzone">
+      <span class="idle" id="dropzone-label"></span>
+      <span class="armed">Release to add files</span>
+    </button>
+    <div class="menu" id="tool-menu"></div>
+    <p class="bright" id="status"></p>
+    <p id="bar" hidden></p>
+    <p class="hint keys">[Up/Down] Move · [Left/Right] Change · [Enter] Select · [Esc] Main menu</p>
+  </section>
+
+  <input type="file" id="picker" hidden>
+
+  <section id="done" hidden>
+    <p class="bright" id="done-summary"></p>
+    <ul id="results"></ul>
+    <div class="menu">
+      <button type="button" data-key="1" id="download">[1] Download</button>
+      <button type="button" data-key="2" id="again">[2] Back</button>
+      <button type="button" data-key="3" id="main-menu">[3] Main menu</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>Runs in your browser with pdf-lib and pdf.js. Nothing is uploaded. Made by <a href="https://davidxie.dev">David Xie</a>.</p>
+  </footer>
+</main>
+</body>
+</html>
